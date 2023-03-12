@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header class="header scroll-header">
+    <AppNav></AppNav>
+  </header>
+  <main class="main">
+    <AppHome></AppHome>
+    <AppAbout></AppAbout>
+    <AppQualification></AppQualification>
+    <AppSkills></AppSkills>
+    <AppPortfolio></AppPortfolio>
+    <AppContact></AppContact>
+  </main>
+  <AppFooter></AppFooter>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppNav from './components/AppNav.vue'
+import AppHome from './components/AppHome.vue';
+import AppAbout from './components/AppAbout.vue';
+import AppSkills from './components/AppSkills.vue';
+import AppQualification from './components/AppQualification.vue';
+import AppPortfolio from './components/AppPortfolio.vue';
+import AppContact from './components/AppContact.vue';
+import AppFooter from './components/AppFooter.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppNav,
+    AppHome,
+    AppAbout,
+    AppSkills,
+    AppQualification,
+    AppPortfolio,
+    AppContact,
+    AppFooter
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "@/styles/index.scss";
 </style>

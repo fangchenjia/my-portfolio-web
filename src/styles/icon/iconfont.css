@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "alicon"; /* Project id 3913755 */
+  src: url('iconfont.eot?t=1677304962388'); /* IE9 */
+  src: url('iconfont.eot?t=1677304962388#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff2?t=1677304962388') format('woff2'),
+       url('iconfont.woff?t=1677304962388') format('woff'),
+       url('iconfont.ttf?t=1677304962388') format('truetype');
+}
+
+.alicon {
+  font-family: "alicon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alicon-taiyang:before {
+  content: "\e635";
+}
+
+.alicon-fanyi1:before {
+  content: "\e6fb";
+}
+
+.alicon-apps:before {
+  content: "\e729";
+}
+
+.alicon-xiazai:before {
+  content: "\e601";
+}
+
+.alicon-xiaoxi:before {
+  content: "\e602";
+}
+
+.alicon-work0:before {
+  content: "\e61d";
+}
+
+.alicon-daima:before {
+  content: "\e604";
+}
+
+.alicon-server:before {
+  content: "\e64d";
+}
+
+.alicon-map:before {
+  content: "\e65a";
+}
+
+.alicon-houtaiweihu:before {
+  content: "\e61c";
+}
+
+.alicon-zhixiangyou:before {
+  content: "\e8f4";
+}
+
+.alicon-guanbijiantou:before {
+  content: "\e86d";
+}
+
+.alicon-user:before {
+  content: "\e7ae";
+}
+
+.alicon-lianxi:before {
+  content: "\e938";
+}
+
+.alicon-online-tracking:before {
+  content: "\e87d";
+}
+
+.alicon-brief-bag:before {
+  content: "\e613";
+}
+
+.alicon-zhuanyeyukecheng:before {
+  content: "\e660";
+}
+
+.alicon-github:before {
+  content: "\e732";
+}
+
+.alicon-zhuye:before {
+  content: "\e83a";
+}
+
+.alicon-github1:before {
+  content: "\e6b7";
+}
+
+.alicon-wodezuopin:before {
+  content: "\e680";
+}
+
+.alicon-rili:before {
+  content: "\e8b4";
+}
+
+.alicon-bg-code:before {
+  content: "\e63b";
+}
+
+.alicon-feiji:before {
+  content: "\e90a";
+}
+
+.alicon-yuzhijineng:before {
+  content: "\e62c";
+}
+
+.alicon-envelope_open:before {
+  content: "\e65c";
+}
+
+.alicon-envelope:before {
+  content: "\e6e3";
+}
+
+.alicon-graduation:before {
+  content: "\e6eb";
+}
+
+.alicon-arrow-down:before {
+  content: "\e665";
+}
+
+.alicon-map1:before {
+  content: "\e677";
+}
+
+.alicon-mobile-phone:before {
+  content: "\e678";
+}
+
+.alicon-arrow-left-bold:before {
+  content: "\e685";
+}
+
+.alicon-arrow-up-bold:before {
+  content: "\e686";
+}
+
+.alicon-arrow-right-bold:before {
+  content: "\e687";
+}
+
+.alicon-network:before {
+  content: "\e67a";
+}
+
+.alicon-mouse:before {
+  content: "\e6e4";
+}
+
+.alicon-code-branch:before {
+  content: "\e607";
+}
+
+.alicon-brackets-curly:before {
+  content: "\e610";
+}
+
+.alicon-moon:before {
+  content: "\e65d";
+}
+
+.alicon-guanbi:before {
+  content: "\e61e";
+}
+
+.alicon-gitee:before {
+  content: "\ec9f";
+}
+
+.alicon-xieboke:before {
+  content: "\e600";
+}
+

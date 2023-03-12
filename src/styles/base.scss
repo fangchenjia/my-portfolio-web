@@ -1,0 +1,142 @@
+/*==================== 初始化样式 ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== 自定义公共样式 ====================*/
+.container {
+  max-width: 900px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+
+  @include max-screen(350px) {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  @include min-screen(768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+
+  @include min-screen(768px) {
+    top: 0;
+    bottom: initial;
+    padding: 0 1rem;
+  }
+
+  @include min-screen(1024px) {
+    padding: 0;
+  }
+}
+
+.section {
+  padding: 2rem 0 4rem;
+  @include min-screen(768px) {
+    padding: 6rem 0 2rem;
+  }
+  &__title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: var(--mb-0-5);
+  }
+  &__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    text-align: center;
+  }
+}
+.main {
+  @include min-screen(768px) {
+    padding: 0 1rem;
+  }
+  @include min-screen(1024px) {
+    padding: 0;
+  }
+}
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFFF;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+  &__icon {
+    font-size: 1.2rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+  }
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+    transition: .3s;
+  }
+  &--small {
+    padding: .75rem 1rem;
+  }
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--first-color);
+    &:hover {
+      background-color: transparent;
+      color: var(--first-color-alt);
+    }
+  }
+}
