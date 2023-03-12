@@ -18,7 +18,7 @@ export const useThemeState = createGlobalState(
     // return { count, doubleCount, increment }
 
     // theme数据储存本地
-    const theme = useStorage('theme','light',localStorage)
+    const theme = useStorage('theme','dark',localStorage)
     // 初始化主题
     document.body.setAttribute('data-theme',theme.value)
     // 切换主题
