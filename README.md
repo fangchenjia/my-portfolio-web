@@ -6,7 +6,7 @@
 原项目地址 https://gitee.com/asoutherncat/responsive-portfolio-website/tree/master
 
 对原项目用vue进行了重写，并且主页结合threejs。
-![](https://myblog-1303177382.cos.ap-chongqing.myqcloud.com/image-20230312121941269.png)
+![image-20230312122826201](./pre.png)
 
 ## Project setup
 ```
