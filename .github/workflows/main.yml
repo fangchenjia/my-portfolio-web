@@ -1,0 +1,56 @@
+# This is a basic workflow that is manually triggered
+
+name: Manual workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+       # 检出代码到工作目录 
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # 安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      # 安装项目依赖
+      - name: Install dependencies
+        run: npm install
+       # 构建前端项目
+      - name: Build project
+        run: npm run build
+      # 登录到 Docker Hub
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      # 构建并推送 Docker 镜像
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: fangchenjia/portfolio-web:latest
+      - name: Deploy to Docker
+        uses: appleboy/ssh-action@master
+        with:
+          host: 110.42.213.115
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            docker stop portfolio-web || true
+            docker rm portfolio-web || true
+            docker pull fangchenjia/portfolio-web
+            docker run -d -p 8082:80 --name portfolio-web fangchenjia/portfolio-web
+
+  
