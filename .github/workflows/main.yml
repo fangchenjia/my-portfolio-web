@@ -50,6 +50,7 @@ jobs:
           script: |
             docker stop portfolio-web || true
             docker rm portfolio-web || true
+            docker rmi fangchenjia/portfolio-web || true
             docker pull fangchenjia/portfolio-web
             docker run -d -p 8082:80 --name portfolio-web fangchenjia/portfolio-web
 
