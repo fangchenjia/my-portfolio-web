@@ -44,7 +44,7 @@ jobs:
       - name: Deploy to Docker
         uses: appleboy/ssh-action@master
         with:
-          host: 110.42.213.115
+          host: 60.204.153.176
           username: root
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
